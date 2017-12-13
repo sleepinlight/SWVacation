@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
 
 class SWForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.handleSearch();
+  }
+
   render() {
     return (
       <div className="searchbar-container">
-        <form id="swsearch">
+        <form id="swsearch" onSubmit={this.handleSubmit}>
           <input
             type="text"
             id="swsearchbar"
@@ -13,13 +23,13 @@ class SWForm extends React.Component {
             value={this.props.value}
           />
           <div className="buttonsw">
-            <button
-              type="button"
+            <input
+              type="submit"
+              value="Submit"
               id="swsubmit"
-              onClick={this.props.handleSearch}
-            >
-              Submit
-            </button>
+
+            />
+
           </div>
         </form>
       </div>

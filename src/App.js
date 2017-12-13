@@ -18,10 +18,7 @@ class App extends Component {
     this.state = {
       value: '',
       stockPlanets: [
-        { name: 'Coruscant', climate: '', population: '' },
-        { name: 'Tatooine', climate: '', population: '' },
-        { name: 'Kamino', climate: '', population: '' }
-      ]
+        ]
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
@@ -54,13 +51,15 @@ class App extends Component {
             tempObj['name'] = item['name'];
             tempObj['climate'] = item['climate'];
             tempObj['population'] = item['population'];
+            tempObj['terrain'] = item['terrain'];
+            tempObj['color'] = 'red';
+            console.log(tempArray);
             tempArray.push(tempObj);
           });
 
           component.setState({ stockPlanets: tempArray });
         })
         .catch(function(err) {
-          err = 'errrr!';
           console.log(err);
         });
     }
@@ -84,6 +83,8 @@ class App extends Component {
                 planetName={planet.name}
                 planetClimate={planet.climate}
                 planetPopulation={planet.population}
+                planetTerrain={planet.terrain}
+                planetColor={planet.color}
               />
             );
           })}
