@@ -38,18 +38,49 @@
   background-color: #202734;
 }
 
-.round-planet {
-  border-radius: 100%;
-  height: 120px;
+.round-planet-outer {
   width: 120px;
-
+  height: 120px;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
   margin: 0 auto;
   margin-top: 18px;
   margin-bottom: 18px;
+
+}
+
+.round-planet {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
+
+}
+
+.round-planet:before {
+  content: "";
+  position: absolute;
+  top: 1%;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 90% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+  filter: blur(5px);
+  z-index: 2;
 }
 
 .planet-details {
-  padding: 10px;
+  padding: 15px;
+  font-size:0.9em;
 }
 
 .planet-title {
@@ -63,6 +94,12 @@
   font-weight: bold;
 }
 
+.nav {
+  margin-top:0;
+  padding:20px;
+  background-color: rgba(32, 39, 52, 0.7);
+}
+
 .nav li {
   margin-right: 15px;
   display: inline-block;
@@ -74,4 +111,37 @@
 .nav li a {
   text-decoration: none;
   color: #15b1e5;
+}
+
+#swsubmit {
+  background-color: #202734;
+color: #15b1e5;
+font-weight: 700;
+text-transform: uppercase;
+border: 1px solid #15b1e5;
+padding: 10px;
+border-radius:2px;
+
+}
+
+#swsubmit:hover {
+  background-color:#15b1e5;
+  color:#ffffff;
+}
+
+#swsearchbar {
+  padding: 11px;
+    /* border-radius: 6px; */
+    margin: 10px;
+    border: none;
+    background-color: bisque;
+    border-radius:2px;
+}
+
+.divider-line {
+  border-style: none;
+    padding: 2px;
+    max-width:70%;
+    border-radius: 6px;
+    background-color:#15b1e5;
 }

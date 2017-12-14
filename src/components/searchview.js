@@ -42,7 +42,11 @@ class SearchView extends Component {
             tempObj['climate'] = item['climate'];
             tempObj['population'] = item['population'];
             tempObj['terrain'] = item['terrain'];
-            tempObj['color'] = 'red';
+            if(tempObj.climate === "arid") {
+              tempObj['color'] = '#c54403';
+            } else {
+              tempObj['color'] = '#8da9d1';
+            }
             //console.log(tempArray);
             tempArray.push(tempObj);
           });

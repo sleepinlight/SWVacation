@@ -5,11 +5,14 @@ class PlanetBox extends React.Component {
 
     return (
       <div className="planetbox">
+      <div className="round-planet-outer">
         <div className="round-planet" style={{backgroundColor: this.props.planetColor}}/>
+        </div>
         <div className="planet-details">
           <h3 className="planet-title">
             {this.props.planetName}
           </h3>
+          <hr className="divider-line"/>
           <h4>
             Climate: {this.props.planetClimate}
           </h4>
