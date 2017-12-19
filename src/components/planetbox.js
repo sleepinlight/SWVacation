@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class PlanetBox extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class PlanetBox extends React.Component {
           <h4>
             Population: {this.props.planetPopulation}
           </h4>
+          
         </div>
       </div>
     );

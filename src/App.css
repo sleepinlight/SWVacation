@@ -3,6 +3,16 @@
   src: url("./other/Starjedi.ttf");
 }
 
+p {
+  color:#ffffff;
+
+}
+
+p a {
+  color:#81e8f6;
+  text-decoration:none;
+}
+
 .buttonsw {
   display: inline;
 }
@@ -12,11 +22,18 @@
   text-align: center;
 }
 
-.top-container h1 {
+.top-container h1, h1 {
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
   color: gold;
+  font-family: "Star Jedi";
+}
+
+h2 {
+  color:#81e8f6;
+
+  text-align:center;
 }
 
 .top-container {
@@ -144,4 +161,10 @@ border-radius:2px;
     max-width:70%;
     border-radius: 6px;
     background-color:#15b1e5;
+}
+
+.about-container {
+  text-align:center;
+  max-width:300px;
+  margin:0 auto;
 }

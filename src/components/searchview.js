@@ -63,7 +63,7 @@ class SearchView extends Component {
   render() {
     return (
       <div className="top-container">
-        <h1>Search for a Planet</h1>
+        <h1>Search By Planet</h1>
         <SWForm
           handleChange={this.handleChange}
           handleSearch={this.handleSearch}

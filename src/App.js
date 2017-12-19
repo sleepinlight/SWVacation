@@ -7,7 +7,9 @@ import {
   planetator
 } from './services/swservices';
 import Nav from './components/nav';
+import HomeView from './components/homeview';
 import SearchView from './components/searchview';
+import AboutView from './components/aboutview';
 import TestComp from './components/testcomp';
 import SWForm from './components/swform';
 import PlanetBox from './components/planetbox';
@@ -20,7 +22,9 @@ class App extends Component {
       <Router>
         <div className="container">
           <Nav />
+          <Route exact path="/" component={HomeView} />
           <Route path="/search" component={SearchView} />
+          <Route path="/about" component={AboutView} />
         </div>
       </Router>
     );
